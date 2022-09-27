@@ -68,7 +68,8 @@ cards <- function(data,
                   label_colour = NULL,
                   border_colour = NULL,
                   border_width = 1,
-                  border_radius = 3
+                  border_radius = 3,
+                  target = NULL
 ) {
 
   quosures <- enquos(
@@ -86,7 +87,8 @@ cards <- function(data,
     label_colour = label_colour,
     border_width = border_width,
     border_colour = border_colour,
-    border_radius = border_radius
+    border_radius = border_radius,
+    target = target
   )
 
   # because we might modify the quosures list, we have to coerce to a bare list
