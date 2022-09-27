@@ -3,11 +3,11 @@
 layout_card_vertical <- function(title, text, image, link,
                                  footer, header, tags, layout,
                                  padding, spacing, breakpoint,
-                                 label_colour, border, border_radius) {
+                                 label_colour, border, border_radius, target) {
 
   corners <- card_corners(layout, footer, header, border_radius)
   pieces <- card_pieces(title, text, image, link, footer, header,
-                        layout, border, corners)
+                        layout, border, corners, target)
 
   # defensive coding!
   rm(title, text, image, footer, header)
@@ -32,11 +32,11 @@ layout_card_vertical <- function(title, text, image, link,
 layout_card_labelonly <- function(title, text, image, link,
                                   footer, header, tags, layout,
                                   padding, spacing, breakpoint,
-                                  label_colour, border, border_radius) {
+                                  label_colour, border, border_radius, target) {
 
   corners <- card_corners(layout, footer, header, border_radius)
   pieces <- card_pieces(title, text, image, link, footer, header,
-                        layout, border, corners)
+                        layout, border, corners, target)
 
   # defensive coding!
   rm(title, text, image, footer, header)
@@ -58,11 +58,11 @@ layout_card_labelonly <- function(title, text, image, link,
 layout_card_imageonly <- function(title, text, image, link,
                                   footer, header, tags, layout,
                                   padding, spacing, breakpoint,
-                                  label_colour, border, border_radius) {
+                                  label_colour, border, border_radius, target) {
 
   corners <- card_corners(layout, footer, header, border_radius)
   pieces <- card_pieces(title, text, image, link, footer, header,
-                        layout, border, corners)
+                        layout, border, corners, target)
 
   # defensive coding!
   rm(title, text, image, footer, header)
@@ -79,11 +79,11 @@ layout_card_imageonly <- function(title, text, image, link,
 layout_card_horizontal <- function(title, text, image, link,
                                    footer, header, tags, layout,
                                    padding, spacing, breakpoint,
-                                   label_colour, border, border_radius) {
+                                   label_colour, border, border_radius, target) {
 
   corners <- card_corners(layout, footer, header, border_radius)
   pieces <- card_pieces(title, text, image, link, footer, header,
-                        layout, border, corners)
+                        layout, border, corners, target)
 
   # defensive coding!
   rm(title, text, image, footer, header)
@@ -126,11 +126,11 @@ layout_card_horizontal <- function(title, text, image, link,
 layout_card_inset <- function(title, text, image, link,
                               footer, header, tags, layout,
                               padding, spacing, breakpoint,
-                              label_colour, border, border_radius) {
+                              label_colour, border, border_radius, target) {
 
   corners <- card_corners(layout, footer, header, border_radius)
   pieces <- card_pieces(title, text, image, link, footer, header,
-                        layout, border, corners)
+                        layout, border, corners, target)
 
   # defensive coding!
   rm(title, text, image, footer, header)
