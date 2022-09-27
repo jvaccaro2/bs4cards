@@ -1,6 +1,6 @@
 
 card_pieces <- function(title, text, image, link, footer, header,
-                        layout, border, corners) {
+                        layout, border, corners, target) {
 
   title  <- make_title(title, text)
   text   <- make_text(text, title)
@@ -8,10 +8,14 @@ card_pieces <- function(title, text, image, link, footer, header,
   image  <- make_image(image, layout, corners, border)
   footer <- make_footer(footer, corners, border)
   header <- make_header(header, corners, border)
-
+  
+  if(!is.na(target)) {
+    target <- '_self'
+  }
+  
   if(!is_na(link)) {
-    title <- htmltools::a(title, href = link)
-    image <- htmltools::a(image, href = link, style = image_link_style())
+    title <- htmltools::a(title, href = link, target = target)
+    image <- htmltools::a(image, href = link, target = target, style = image_link_style())
   }
 
   return(list(title = title, text = text, image = image,
