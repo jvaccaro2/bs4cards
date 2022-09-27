@@ -17,7 +17,7 @@ build_card_row <- function(data) {
 
 build_card <- function(title, text, image, link, footer, header, tags,
                        width, layout, padding, spacing, breakpoint, label_colour,
-                       border_width, border_colour, border_radius){
+                       border_width, border_colour, border_radius, target){
 
   layout_card <- switch(
     layout,
@@ -42,7 +42,7 @@ build_card <- function(title, text, image, link, footer, header, tags,
     title, text, image, link,
     footer, header, tags, layout,
     padding, spacing, breakpoint,
-    label_colour, border, border_radius
+    label_colour, border, border_radius, target
   ))
 }
 
