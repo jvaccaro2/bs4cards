@@ -10,7 +10,7 @@ card_pieces <- function(title, text, image, link, footer, header,
   header <- make_header(header, corners, border)
   
   if(!is.na(target)) {
-    target <- '_self'
+    target <- '_blank'
   }
   
   if(!is_na(link)) {
