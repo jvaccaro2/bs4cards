@@ -69,7 +69,7 @@ cards <- function(data,
                   border_colour = NULL,
                   border_width = 1,
                   border_radius = 3,
-                  target = NULL
+                  target = '_blank'
 ) {
 
   quosures <- enquos(
@@ -108,7 +108,6 @@ cards <- function(data,
 
   card_spec <- lapply(quosures, function(x) eval_tidy(x, data = data))
   card_spec$padding <- 0 # hack
-  card_spec$target <- target
                       
   card_data <- build_card_data(card_spec, nrow(data))
   card_row <- build_card_row(card_data)
